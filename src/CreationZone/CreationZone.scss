@@ -1,0 +1,65 @@
+@import '../variables';
+
+.creation-title {
+  @include mainTitles();
+  text-align: center;
+}
+
+.build-btn {
+  @include mainBtn();
+  margin: 20%;
+}
+
+.build-btn:hover {
+  @include mainBtnHover();
+}
+
+.build-btn:active {
+  @include mainBtnActive();
+}
+
+.creation-zone {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.team-name-label {
+  margin: 5% 0 0 0;
+  color: white;
+  font-size: 1.2em;
+}
+
+.team-name-input {
+  width: 30%;
+  height: 5rem;
+  font-size: 1em;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 3px black;
+}
+
+.member-inputs {
+  display: flex;
+  // flex-direction: row;
+  // justify-content: space-around;
+  margin: 5% 0 0 0;
+  // padding: 0 0 0 0;
+  // content: none;
+}
+
+.member-label {
+  color: white;
+}
+
+.member-input {
+  width: 10rem;
+  height: 2rem;
+  // margin: 1%;
+  font-size: 1em;
+  border-radius: 5px;
+  outline: none;
+  box-shadow: 0 3px black;
+}
