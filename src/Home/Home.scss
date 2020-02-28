@@ -1,5 +1,6 @@
+@import '../variables';
+
 .Home {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../Assets/main-bg.jpeg');
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -8,11 +9,9 @@
 }
 
 .main-title {
-  color: white;
-  font-size: 60px;
-  text-shadow: 3px 3px black;
-  animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  @include mainTitles();
   margin: -5% 0 20% 0;
+  text-align: center;
 }
 
 .instruction-box {
@@ -38,32 +37,15 @@
 }
 
 .create-btn {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  font-family: 'Bangers';
-  background-color: white;
-  width: 11rem;
-  height: 4rem;
-  outline: none;
-  border-radius: 20px;
-  font-size: 1.5em; 
-  margin: 3% 0 0 0;
-  cursor: pointer;
-  box-shadow: 0 3px black;
-  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  @include mainBtn();
 }
 
 .create-btn:hover {
-  background-color: rgb(237,48,75);
-  color: white;
+  @include mainBtnHover();
 }
 
 .create-btn:active {
-  color: white;
-  background-color: rgb(237,48,75);
-  box-shadow: 0 0px black;
-  transform: translateY(3px);
+  @include mainBtnActive();
 }
 
 a {

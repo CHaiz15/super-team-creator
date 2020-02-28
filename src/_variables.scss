@@ -1,0 +1,38 @@
+$primary-red:rgb(237,48,75);
+
+
+@mixin mainTitles() {
+  color: white;
+  font-size: 60px;
+  text-shadow: 3px 3px black;
+  animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@mixin mainBtn() {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: 'Bangers';
+  background-color: white;
+  width: 11rem;
+  height: 4rem;
+  outline: none;
+  border-radius: 20px;
+  font-size: 1.5em; 
+  margin: 3% 0 0 0;
+  cursor: pointer;
+  box-shadow: 0 3px black;
+  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@mixin mainBtnHover() {
+  background-color: $primary-red;
+  color: white;
+}
+
+@mixin mainBtnActive() {
+  color: white;
+  background-color: $primary-red;
+  box-shadow: 0 0px black;
+  transform: translateY(3px);
+}
