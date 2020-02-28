@@ -1,19 +1,22 @@
 import React, { Component } from 'react'
 import './CreationZone.scss'
 import { NavLink } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createTeam } from '../Actions'
 
 class CreationZone extends Component {
   constructor() {
     super();
     this.state = {
-        name: '',
-        memberOne: '',
-        memberTwo: '',
-        memberThree: '',
+      name: '',
+      memberOne: '',
+      memberTwo: '',
+      memberThree: '',
     }
   }
 
   handleChange(e) {
+    e.preventDefault();
     this.setState({[e.target.name]: e.target.value})
   }
 
@@ -59,12 +62,16 @@ class CreationZone extends Component {
             />
             </label>
           </div>
-          <NavLink className='build-btn' type='button' to='/team'>Build</NavLink>
+          <NavLink className='build-btn' type='button' to='/team' onClick={() => this.props.createTeam(this.state)}>Build</NavLink>
         </section>
       </>
     )
   }
 }
 
+export const mapDispatchToProps = dispatch => ({
+  createTeam: team => dispatch(createTeam(team)),
+})
 
-export default CreationZone;
+
+export default connect(null, mapDispatchToProps)(CreationZone);
