@@ -2,7 +2,7 @@ import React from 'react';
 import './Home.scss';
 import { NavLink } from 'react-router-dom';
 
-function Home() {
+export const Home = () => {
   return (        
     <main className="Home">
       <h1 className='main-title'>Super Team Creator</h1>
