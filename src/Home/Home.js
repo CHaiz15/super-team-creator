@@ -1,6 +1,6 @@
-import React from 'react';
-import './Home.scss';
-import { NavLink } from 'react-router-dom';
+import React from 'react'
+import './Home.scss'
+import { NavLink } from 'react-router-dom'
 
 export const Home = () => {
   return (        
@@ -15,7 +15,7 @@ export const Home = () => {
       </div>
       <NavLink type='button' to='/create' className='create-btn'>Create</NavLink>
     </main>
-  );
+  )
 }
 
 export default Home;

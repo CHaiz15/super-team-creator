@@ -2,7 +2,7 @@ import React from 'react'
 import './FavTeamDisplay.scss'
 
 export const FavTeamDisplay = (props) => {
-  let {name, memberOne, memberTwo, memberThree} = props.location.state.team;
+  let {name, memberOne, memberTwo, memberThree} = props.location.state.team
   return ( 
       <>
         <h1 className='creation-title'>{name}</h1>
