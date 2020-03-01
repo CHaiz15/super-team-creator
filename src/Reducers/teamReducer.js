@@ -1,4 +1,3 @@
-
 export const teamReducer = (state = {}, action) => {
   
   switch (action.type) {
