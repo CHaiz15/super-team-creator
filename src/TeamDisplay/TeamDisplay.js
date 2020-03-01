@@ -1,7 +1,7 @@
 import React from 'react'
 import './TeamDisplay.scss'
 import { connect } from 'react-redux'
-import { Loader } from '../Loader/Loader';
+import { Loader } from '../Loader/Loader'
 import { addFavorite } from '../Actions'
 
 export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addFavorite}) => {
