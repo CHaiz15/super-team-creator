@@ -1,5 +1,4 @@
 export const teamReducer = (state = {}, action) => {
-  
   switch (action.type) {
     case 'CREATE_TEAM':
       return {
