@@ -1,20 +1,57 @@
-import React, { Component } from 'react'
-import './CreationZone.scss'
-import { NavLink } from 'react-router-dom';
+import React, { Component } from 'react';
+import './CreationZone.scss';
+import { connect } from 'react-redux';
+import { createTeam } from '../Actions';
+import { getMember } from '../apiCalls';
+import { NavLink } from 'react-router-dom'
+
 
 class CreationZone extends Component {
   constructor() {
     super();
     this.state = {
-        name: '',
-        memberOne: '',
-        memberTwo: '',
-        memberThree: '',
+      name: '',
+      memberOne: '',
+      memberTwo: '',
+      memberThree: '',
+      isLoading: '',
     }
   }
 
   handleChange(e) {
+    e.preventDefault();
     this.setState({[e.target.name]: e.target.value})
+  }
+
+  fetchMembers = async () => {
+    let member1, member2, member3;
+    let response1 = await getMember(this.state.memberOne)
+      if(response1.response === 'error') {
+
+      } else {
+        member1 = response1.results[0];
+      }
+    let response2 = await getMember(this.state.memberTwo)
+      if(response2.response === 'error') {
+
+      } else {
+        member2 = response2.results[0];
+      }
+    let response3 = await getMember(this.state.memberThree)
+      if(response3.response === 'error') {
+
+      } else {
+        member3 = response3.results[0];
+      }
+    
+    let team = {
+      name: this.state.name,
+      memberOne: member1,
+      memberTwo: member2,
+      memberThree: member3,
+    }
+
+    this.props.createTeam(team)
   }
 
   render() {
@@ -59,12 +96,16 @@ class CreationZone extends Component {
             />
             </label>
           </div>
-          <NavLink className='build-btn' type='button' to='/team'>Build</NavLink>
+          <NavLink className='build-btn' type='button' to='/team' onClick={() => this.fetchMembers()}>Build</NavLink>
         </section>
       </>
     )
   }
 }
 
+export const mapDispatchToProps = dispatch => ({
+  createTeam: team => dispatch(createTeam(team)),
+})
 
-export default CreationZone;
+
+export default connect(null, mapDispatchToProps)(CreationZone);
