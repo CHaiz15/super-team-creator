@@ -17,9 +17,5 @@ export const mapStateToProps = state => ({
   favorites: state.favorites,
 })
 
-export const mapDispatchToProps = dispatch => ({
-  // addFavorite: team => dispatch(addFavorite(team)),
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Favorites);
+export default connect(mapStateToProps)(Favorites);
 
