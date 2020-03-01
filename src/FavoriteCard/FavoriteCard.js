@@ -1,7 +1,6 @@
 import React from 'react'
 
 export const FavoriteCard = ({team}) => {
-console.log(team.name);
 
   return (
     <div>
