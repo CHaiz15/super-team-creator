@@ -5,3 +5,14 @@ export const createTeam = (team) => ({
   memberTwo: team.memberTwo,
   memberThree: team.memberThree,
 })
+
+export const addFavorite = (team) => ({
+  type: 'ADD_FAVORITE',
+  team: {
+    name: team.name,
+    memberOne: team.memberOne,
+    memberTwo: team.memberTwo,
+    memberThree: team.memberThree,
+  } 
+})
+
