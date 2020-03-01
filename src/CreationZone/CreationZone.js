@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import './CreationZone.scss';
-import { connect } from 'react-redux';
-import { createTeam } from '../Actions';
-import { getMember } from '../apiCalls';
+import React, { Component } from 'react'
+import './CreationZone.scss'
+import { connect } from 'react-redux'
+import { createTeam } from '../Actions'
+import { getMember } from '../apiCalls'
 import { NavLink } from 'react-router-dom'
 
 
@@ -107,4 +107,4 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 
-export default connect(null, mapDispatchToProps)(CreationZone);
+export default connect(null, mapDispatchToProps)(CreationZone)
