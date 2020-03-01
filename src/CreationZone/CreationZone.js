@@ -10,11 +10,10 @@ class CreationZone extends Component {
   constructor() {
     super();
     this.state = {
-      name: '',
-      memberOne: '',
-      memberTwo: '',
-      memberThree: '',
-      isLoading: '',
+      name: 'Best Team Ever',
+      memberOne: 'Hulk',
+      memberTwo: 'Thanos',
+      memberThree: 'Batman',
     }
   }
 
