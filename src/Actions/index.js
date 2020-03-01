@@ -13,6 +13,11 @@ export const addFavorite = (team) => ({
     memberOne: team.memberOne,
     memberTwo: team.memberTwo,
     memberThree: team.memberThree,
+    id: Date.now(),
   } 
 })
 
+export const deleteFavorite = (id) => ({
+  type: 'DELETE_FAVORITE',
+  id: id,
+})
