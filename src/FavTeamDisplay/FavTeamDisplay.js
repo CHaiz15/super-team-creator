@@ -1,15 +1,11 @@
 import React from 'react'
-import './TeamDisplay.scss'
-import { connect } from 'react-redux'
-import { Loader } from '../Loader/Loader';
-import { addFavorite } from '../Actions'
+import './FavTeamDisplay.scss'
 
-export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addFavorite}) => {
+export const FavTeamDisplay = (props) => {
+  let {name, memberOne, memberTwo, memberThree} = props.location.state.team;
   return ( 
-    !memberOne ? <Loader />:
       <>
         <h1 className='creation-title'>{name}</h1>
-        <button type='button' className='build-btn' onClick={() => addFavorite(team)}>Add to Favorites</button>
         <section className='team-container'>
           <div>
             <h3>{memberOne.name}</h3>
@@ -63,17 +59,4 @@ export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addF
     )
   }
 
-
-export const mapStateToProps = state => ({
-  team: state.team,
-  name: state.team.name,
-  memberOne: state.team.memberOne,
-  memberTwo: state.team.memberTwo,
-  memberThree: state.team.memberThree,
-})
-
-export const mapDispatchToProps = dispatch => ({
-  addFavorite: team => dispatch(addFavorite(team)),
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(TeamDisplay)
+export default FavTeamDisplay

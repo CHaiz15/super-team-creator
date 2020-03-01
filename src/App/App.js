@@ -5,6 +5,7 @@ import Home from '../Home/Home.js'
 import CreationZone from '../CreationZone/CreationZone'
 import TeamDisplay from '../TeamDisplay/TeamDisplay'
 import Favorites from '../Favorites/Favorites'
+import FavTeamDisplay from '../FavTeamDisplay/FavTeamDisplay'
 
 function App() {
   return (        
@@ -13,6 +14,7 @@ function App() {
       <Route exact path='/create' component={CreationZone} />
       <Route exact path='/team' component={TeamDisplay} />
       <Route exact path='/favorites' component={Favorites} />
+      <Route exact path='/favTeam' component={FavTeamDisplay} />
     </>
   );
 }
