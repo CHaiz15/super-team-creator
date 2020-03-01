@@ -1,4 +1,4 @@
-export const createTeam = team => ({
+export const createTeam = (team) => ({
   type: 'CREATE_TEAM',
   name: team.name,
   memberOne: team.memberOne,
