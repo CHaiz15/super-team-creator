@@ -9,10 +9,10 @@ export class CreationZone extends Component {
   constructor() {
     super();
     this.state = {
-      name: 'Best Team Ever',
-      memberOne: 'Hulk',
-      memberTwo: 'Thanos',
-      memberThree: 'Batman',
+      name: '',
+      memberOne: '',
+      memberTwo: '',
+      memberThree: '',
     }
   }
 
@@ -24,21 +24,15 @@ export class CreationZone extends Component {
   fetchMembers = async () => {
     let member1, member2, member3;
     let response1 = await getMember(this.state.memberOne)
-      if(response1.response === 'error') {
-
-      } else {
+      if(response1.response !== 'error') {
         member1 = response1.results[0];
       }
     let response2 = await getMember(this.state.memberTwo)
-      if(response2.response === 'error') {
-
-      } else {
+      if(response2.response !== 'error') {
         member2 = response2.results[0];
       }
     let response3 = await getMember(this.state.memberThree)
-      if(response3.response === 'error') {
-
-      } else {
+      if(response3.response !== 'error') {
         member3 = response3.results[0];
       }
     
