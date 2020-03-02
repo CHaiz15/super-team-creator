@@ -1,0 +1,15 @@
+@import '../variables';
+
+.fav-title {
+  @include mainTitles();
+  margin: 0 0 10% 0;
+  text-align: center;
+}
+
+.fav-cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: scroll;
+}

@@ -1,10 +1,5 @@
 @import '../variables';
 
-.fav-btn {
-  @include mainBtn();
-  margin: 10% 0 0 0;
-}
-
 .Home {
   height: 100vh;
   display: flex;
@@ -36,6 +31,7 @@
 }
 
 .instructions {
+  margin: 0;
   font-size: 20px;
   width: 80%;
   line-height: 3rem;

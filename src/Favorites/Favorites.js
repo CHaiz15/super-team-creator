@@ -6,8 +6,8 @@ import { connect } from 'react-redux'
 export const Favorites = ({favorites}) => {
   const favoriteCards = favorites.map(favoriteTeam => <FavoriteCard team={favoriteTeam} />)
   return (
-    <section>
-      <h1 className='creation-title'>Favorites</h1>
+    <section className='fav-cards-container'>
+      <h1 className='fav-title'>Favorites</h1>
       {favoriteCards}
     </section>
   )
