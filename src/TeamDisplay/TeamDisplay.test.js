@@ -107,7 +107,7 @@ describe('TeamDisplay', () => {
   })
 
   describe('mapStateToProps', () => {
-    it('should return an object with an array of movies', () => {
+    it('should return an object with a teams information', () => {
       const mockState = {
         team: {
           name:'Best Team Ever',
