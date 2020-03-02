@@ -17,20 +17,27 @@
 
 ### Overview of Site:
 
-SuperHero API: 
 
-### Super Hero Creator
+## Super Hero Creator
 #### Home:
+<img width="1439" alt="Screen Shot 2020-03-02 at 4 51 53 PM" src="https://user-images.githubusercontent.com/19761687/75729024-bfc66c00-5ca6-11ea-94ec-3b8733842d22.png">
 
 #### Creation Zone:
+<img width="1440" alt="Screen Shot 2020-03-02 at 4 52 15 PM" src="https://user-images.githubusercontent.com/19761687/75729027-c228c600-5ca6-11ea-9101-d18687754a23.png">
 
 #### Team Display:
+<img width="1440" alt="Screen Shot 2020-03-02 at 4 52 52 PM" src="https://user-images.githubusercontent.com/19761687/75729042-c94fd400-5ca6-11ea-94f5-015a97fe6eb7.png">
+
+### Favorites:
+<img width="1440" alt="Screen Shot 2020-03-02 at 4 55 02 PM" src="https://user-images.githubusercontent.com/19761687/75729047-cc4ac480-5ca6-11ea-800c-700269f7fe01.png">
 
 ### Technologies Used:
 - Javascript/React
 - Redux
 - HTML/CSS
 - Jest/Enzyme
+- https://superheroapi.com/
+
 
 ### Systems/Practices
 - git/Version Control
