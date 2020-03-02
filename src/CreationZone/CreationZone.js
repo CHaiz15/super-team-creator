@@ -5,7 +5,6 @@ import { createTeam } from '../Actions'
 import { getMember } from '../apiCalls'
 import { NavLink } from 'react-router-dom'
 
-
 class CreationZone extends Component {
   constructor() {
     super();
@@ -65,6 +64,7 @@ class CreationZone extends Component {
             className='team-name-input'
             placeholder='Team Name'
             onChange={(e) => this.handleChange(e)}
+            maxLength='40'
           />
           <div className='member-inputs'>
             <label className='member-label'>Team Member 1:
@@ -74,6 +74,7 @@ class CreationZone extends Component {
               className='member-input'
               placeholder='Team Member 1'
               onChange={(e) => this.handleChange(e)}
+              maxLength='25'
             />
             </label>
             <label className='member-label'>Team Member 2:
@@ -83,6 +84,7 @@ class CreationZone extends Component {
               className='member-input'
               placeholder='Team Member 2'
               onChange={(e) => this.handleChange(e)}
+              maxLength='25'
             />
             </label>
             <label className='member-label'>Team Member 3:
@@ -92,10 +94,18 @@ class CreationZone extends Component {
               className='member-input'
               placeholder='Team Member 3'
               onChange={(e) => this.handleChange(e)}
+              maxLength='25'
             />
             </label>
           </div>
-          <NavLink className='build-btn' type='button' to='/team' onClick={() => this.fetchMembers()}>Build</NavLink>
+          <NavLink 
+            style={this.state.name && this.state.memberOne && this.state.memberTwo && this.state.memberThree ? {'pointer-events': 'visible'}:{'pointer-events': 'none'}}
+            className='build-btn' 
+            type='button' 
+            to='/team' 
+            onClick={() => this.fetchMembers()}
+            >Build
+          </NavLink>
         </section>
       </>
     )
@@ -105,6 +115,5 @@ class CreationZone extends Component {
 export const mapDispatchToProps = dispatch => ({
   createTeam: team => dispatch(createTeam(team)),
 })
-
 
 export default connect(null, mapDispatchToProps)(CreationZone)
