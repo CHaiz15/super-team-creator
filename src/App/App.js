@@ -7,7 +7,7 @@ import TeamDisplay from '../TeamDisplay/TeamDisplay'
 import Favorites from '../Favorites/Favorites'
 import FavTeamDisplay from '../FavTeamDisplay/FavTeamDisplay'
 
-function App() {
+export const App = () => {
   return (        
     <>
       <Route exact path='/' component={Home} />
