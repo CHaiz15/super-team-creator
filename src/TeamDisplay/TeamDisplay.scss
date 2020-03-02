@@ -1,5 +1,9 @@
 @import '../variables';
 
+body {
+  overflow: hidden;
+}
+
 .screen-top {
   display: flex;
   flex-direction: row;
@@ -13,6 +17,30 @@
   @include mainTitles();
   margin: 4% 0 0 0;
 }
+
+.whack-fav-btn {
+  padding-top: 20px;
+  font-family: 'Bangers';
+  background-color: white;
+  width: 11rem;
+  height: 3rem;
+  outline: none;
+  border-radius: 20px;
+  font-size: 1.5em; 
+  margin: 18% 0 0 0;
+  cursor: pointer;
+  box-shadow: 0 3px black;
+  animation: slide-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.whack-fav-btn:hover {
+  @include mainBtnHover();
+}
+
+.whack-fav-btn:active {
+  @include mainBtnActive();
+}
+
 
 .fav-btn {
   font-family: 'Bangers';
@@ -40,6 +68,7 @@
   font-size: 1.2em;
   margin: 13% 0 0 0;
   color: black;
+  height: 111vh;
 }
 
 .members-container {

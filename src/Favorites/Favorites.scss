@@ -2,7 +2,7 @@
 
 .fav-title {
   @include mainTitles();
-  margin: 0 0 10% 0;
+  margin: -5% 0 10% 0;
   text-align: center;
 }
 
@@ -11,11 +11,26 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow: scroll;
+  height: 100vh;
+}
+
+.cards-container {
+  margin: 0 0 2% 0;
+  background-color: white;
+  width: 80%;
+  border: solid white 5px;
+  border-radius: 10px;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: auto;
 }
 
 .no-favorites {
-  color: white;
+  color: black;
+  font-size: 3em;
 }
 
 .hidden {

@@ -50,6 +50,7 @@ export class CreationZone extends Component {
   render() {
     return (
       <>
+        <NavLink type='button' to='/favorites' className='creation-fav-btn'>Favorites</NavLink>
         <section className='creation-zone'>
           <h1 className='creation-title'>Creation Zone</h1>
           <label className='team-name-label'>Team Name:</label>
@@ -57,44 +58,47 @@ export class CreationZone extends Component {
             name='name'
             value={this.state.name}
             className='team-name-input'
-            placeholder='Team Name'
+            placeholder='Team Name...'
             onChange={(e) => this.handleChange(e)}
             maxLength='40'
           />
           <div className='member-inputs'>
-            <label className='member-label'>Team Member 1:
-            <input 
-              name='memberOne'
-              value={this.state.memberOne}
-              className='member-input'
-              placeholder='Team Member 1'
-              onChange={(e) => this.handleChange(e)}
-              maxLength='25'
-            />
-            </label>
-            <label className='member-label'>Team Member 2:
-            <input 
-              name='memberTwo'
-              value={this.state.memberTwo}
-              className='member-input'
-              placeholder='Team Member 2'
-              onChange={(e) => this.handleChange(e)}
-              maxLength='25'
-            />
-            </label>
-            <label className='member-label'>Team Member 3:
-            <input 
-              name='memberThree'
-              value={this.state.memberThree}
-              className='member-input'
-              placeholder='Team Member 3'
-              onChange={(e) => this.handleChange(e)}
-              maxLength='25'
-            />
-            </label>
+            <div className='input-container'>
+              <label className='member-label'>Team Member 1:</label>
+              <input 
+                name='memberOne'
+                value={this.state.memberOne}
+                className='member-input'
+                placeholder='MemberName...'
+                onChange={(e) => this.handleChange(e)}
+                maxLength='25'
+              />
+            </div>
+            <div className='input-container'>
+              <label className='member-label'>Team Member 2:</label>
+              <input 
+                name='memberTwo'
+                value={this.state.memberTwo}
+                className='member-input'
+                placeholder='Name...'
+                onChange={(e) => this.handleChange(e)}
+                maxLength='25'
+              />
+            </div>
+            <div className='input-container'>
+              <label className='member-label'>Team Member 3:</label>
+              <input 
+                name='memberThree'
+                value={this.state.memberThree}
+                className='member-input'
+                placeholder='Name...'
+                onChange={(e) => this.handleChange(e)}
+                maxLength='25'
+              />
+            </div>
           </div>
           <NavLink 
-            style={this.state.name && this.state.memberOne && this.state.memberTwo && this.state.memberThree ? {'pointer-events': 'visible'}:{'pointer-events': 'none'}}
+            style={this.state.name && this.state.memberOne && this.state.memberTwo && this.state.memberThree ? {'pointerEvents': 'visible'}:{'pointerEvents': 'none'}}
             className='build-btn' 
             type='button' 
             to='/team' 

@@ -17,7 +17,7 @@ export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addF
     return (
     <>
       <div className='screen-top'>
-        <NavLink type='button' to='/favorites' className='fav-btn'>Favorites</NavLink>
+        <NavLink type='button' to='/favorites' className='whack-fav-btn'>Favorites</NavLink>
         <h1 className='team-title'>{name}</h1>
         <button type='button' className='fav-btn' onClick={() => addFavorite(team)}>Add to Favorites</button>
       </div>
