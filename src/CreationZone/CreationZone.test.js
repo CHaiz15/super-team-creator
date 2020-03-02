@@ -141,7 +141,7 @@ describe('CreationZone', () => {
       
       it('should call fetchMembers when Build button is clicked', () => {
         wrapper.instance().fetchMembers = jest.fn()
-        wrapper.find('NavLink').simulate('click')
+        wrapper.find('.build-btn').simulate('click')
         expect(wrapper.instance().fetchMembers).toHaveBeenCalled()
       })
       
