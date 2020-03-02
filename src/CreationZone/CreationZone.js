@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { createTeam } from '../Actions'
 import { getMember } from '../apiCalls'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 export class CreationZone extends Component {
   constructor() {
@@ -111,3 +112,7 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(null, mapDispatchToProps)(CreationZone)
+
+CreationZone.propTypes = {
+  createTeam: PropTypes.func,
+}
