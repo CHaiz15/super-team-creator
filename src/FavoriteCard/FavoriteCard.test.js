@@ -1,6 +1,8 @@
-import React from 'react';
-import { FavoriteCard } from './FavoriteCard.js';
+import React from 'react'
+import { FavoriteCard } from './FavoriteCard.js'
 import { shallow } from 'enzyme'
+import { mapDispatchToProps } from './FavoriteCard'
+import { deleteFavorite } from '../actions'
 
 describe('FavoriteCard', () => {
   let wrapper;
@@ -50,5 +52,17 @@ describe('FavoriteCard', () => {
   })  
   it('should be an instance of the FavoriteCard component', () => {
       expect(wrapper).toMatchSnapshot();
-  });
+  })
+  
+  describe('mapDispatchToProps', () => {
+    it('calls dispatch with a deleteFavorite action when the delete button is clicked', () => {
+      const mockDispatch = jest.fn();
+      const actionToDispatch = deleteFavorite(123);
+
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      mappedProps.deleteFavorite(123);
+
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    })
+  })
 })
