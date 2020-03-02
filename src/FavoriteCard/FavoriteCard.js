@@ -8,15 +8,15 @@ export const FavoriteCard = ({team, deleteFavorite}) => {
 
   return (
     <>
-      <Link to={{pathname:'/favTeam', state: {team}}}> 
-        <div className='fav-card'>
-          <h2>{team.name}</h2>
-          <img className='member-image' src={team.memberOne.image.url} alt='member one'/>
-          <img className='member-image' src={team.memberTwo.image.url} alt='member two'/>
-          <img className='member-image' src={team.memberThree.image.url} alt='member three'/>
-        </div>
-      </Link>
-      <button onClick={() => deleteFavorite(team.id)}>Delete</button>
+      <div className='fav-card'>
+        <h2>{team.name}</h2>
+        <Link to={{pathname:'/favTeam', state: {team}}}> 
+        <img className='card-member-image' src={team.memberOne.image.url} alt='member one'/>
+        <img className='card-member-image' src={team.memberTwo.image.url} alt='member two'/>
+        <img className='card-member-image' src={team.memberThree.image.url} alt='member three'/>
+        </Link>
+        <button onClick={() => deleteFavorite(team.id)}>Delete</button>
+      </div>
     </>
   )
 }
