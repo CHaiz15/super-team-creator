@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { deleteFavorite } from '../Actions'
 import './FavoriteCard.scss'
-import FavTeamDisplay from '../FavTeamDisplay/FavTeamDisplay'
 
 export const FavoriteCard = ({team, deleteFavorite}) => {
 
