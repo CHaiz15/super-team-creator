@@ -3,10 +3,15 @@ import './TeamDisplay.scss'
 import { connect } from 'react-redux'
 import { Loader } from '../Loader/Loader'
 import { addFavorite } from '../Actions'
+import ErrorMessage from '../ErrorMessage/ErrorMessage'
 
 export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addFavorite}) => {
-  return ( 
-    !memberOne ? <Loader />:
+    if(!memberOne && !memberTwo && !memberThree) {
+      return <Loader />
+    } else if (memberOne === undefined || memberTwo === undefined || memberThree === undefined) {
+      return <ErrorMessage />
+    } else {
+      return (
       <>
         <h1 className='creation-title'>{name}</h1>
         <button type='button' className='build-btn' onClick={() => addFavorite(team)}>Add to Favorites</button>
@@ -60,8 +65,9 @@ export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addF
           </div>
         </section>
       </>
-    )
-  }
+      )
+    }
+}
 
 
 export const mapStateToProps = state => ({
