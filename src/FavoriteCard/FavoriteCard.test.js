@@ -50,10 +50,11 @@ describe('FavoriteCard', () => {
       }
     wrapper = shallow(<FavoriteCard key={mockTeam.id} team={mockTeam} deleteFavorite={jest.fn()}/>);
   })  
+
   it('should be an instance of the FavoriteCard component', () => {
-      expect(wrapper).toMatchSnapshot();
+    expect(wrapper).toMatchSnapshot();
   })
-  
+
   describe('mapDispatchToProps', () => {
     it('calls dispatch with a deleteFavorite action when the delete button is clicked', () => {
       const mockDispatch = jest.fn();
