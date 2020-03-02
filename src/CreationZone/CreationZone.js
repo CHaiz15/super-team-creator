@@ -5,7 +5,7 @@ import { createTeam } from '../Actions'
 import { getMember } from '../apiCalls'
 import { NavLink } from 'react-router-dom'
 
-class CreationZone extends Component {
+export class CreationZone extends Component {
   constructor() {
     super();
     this.state = {

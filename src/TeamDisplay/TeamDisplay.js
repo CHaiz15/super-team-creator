@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
 
 export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addFavorite}) => {
+
   if(!memberOne && !memberTwo && !memberThree) {
     return <Loader />
   } else if (memberOne === undefined || memberTwo === undefined || memberThree === undefined) {

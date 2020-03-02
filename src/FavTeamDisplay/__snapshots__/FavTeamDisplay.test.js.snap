@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FavTeamDisplay should be an instance of the FavTeamDisplay component 1`] = `ShallowWrapper {}`;
