@@ -1,6 +1,7 @@
 import React from 'react'
 import './FavTeamDisplay.scss'
 import { NavLink } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 export const FavTeamDisplay = (props) => {
   let {name, memberOne, memberTwo, memberThree} = props.location.state.team
@@ -65,3 +66,10 @@ export const FavTeamDisplay = (props) => {
   }
 
 export default FavTeamDisplay
+
+FavTeamDisplay.propTypes = {
+  name: PropTypes.string,
+  memberOne: PropTypes.object,
+  memberTwo: PropTypes.object,
+  memberThree: PropTypes.object,
+}
