@@ -5,6 +5,7 @@ import { Loader } from '../Loader/Loader'
 import { addFavorite } from '../Actions'
 import { NavLink } from 'react-router-dom'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
+import PropTypes from 'prop-types'
 
 export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addFavorite}) => {
 
@@ -88,3 +89,12 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(TeamDisplay)
+
+TeamDisplay.propTypes = {
+  team: PropTypes.object, 
+  name: PropTypes.string, 
+  memberOne: PropTypes.object, 
+  memberTwo: PropTypes.object, 
+  memberThree: PropTypes.object,
+  addFavorite: PropTypes.func,
+}
