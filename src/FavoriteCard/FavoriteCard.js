@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { deleteFavorite } from '../Actions'
 import './FavoriteCard.scss'
+import PropTypes from 'prop-types'
 
 export const FavoriteCard = ({team, deleteFavorite}) => {
 
@@ -26,3 +27,7 @@ export const mapDispatchToProps = dispatch => ({
 })
 
 export default connect(null, mapDispatchToProps)(FavoriteCard)
+
+FavoriteCard.propTypes = {
+  deleteFavorite: PropTypes.func,
+}

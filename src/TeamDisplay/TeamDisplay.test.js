@@ -5,6 +5,7 @@ import { mapStateToProps, mapDispatchToProps } from './TeamDisplay'
 import { addFavorite } from '../actions'
 
 describe('TeamDisplay', () => {
+  global.Date.now = jest.fn().mockImplementation(() => 12345)
   let wrapper;
   let mockTeam;
   beforeEach(() => {
@@ -46,9 +47,9 @@ describe('TeamDisplay', () => {
           },
           image: {url: "https://www.superherodb.com/pictures2/portraits/10/100/83.jpg"},
         },
-        id: 123,
+        id: Date.now(),
       }
-    wrapper = shallow(<TeamDisplay team={mockTeam} name={mockTeam} memberOne={mockTeam.memberOne} memberTwo={mockTeam.memberTwo} memberThree={mockTeam.memberThree} addFavorite={jest.fn()} />);
+    wrapper = shallow(<TeamDisplay team={mockTeam} name={mockTeam.name} memberOne={mockTeam.memberOne} memberTwo={mockTeam.memberTwo} memberThree={mockTeam.memberThree} addFavorite={jest.fn()} />);
   })  
   it('should be an instance of the TeamDisplay component', () => {
       expect(wrapper).toMatchSnapshot();
