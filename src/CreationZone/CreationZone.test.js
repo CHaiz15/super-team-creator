@@ -3,6 +3,7 @@ import { CreationZone } from './CreationZone'
 import { shallow } from 'enzyme'
 import { mapDispatchToProps } from './CreationZone'
 import { createTeam } from '../actions'
+import { getMember } from '../apiCalls'
 
 describe('CreationZone', () => {
     let wrapper;
@@ -131,11 +132,40 @@ describe('CreationZone', () => {
         expect(wrapper.state('memberThree')).toEqual(expected)
       })
 
+      describe('CreationZone React tests', () => {
+        let wrapper;
+        beforeEach(() => {
+          wrapper = shallow(<CreationZone/>);
+        })  
+      })
+      
       it('should call fetchMembers when Build button is clicked', () => {
         wrapper.instance().fetchMembers = jest.fn()
         wrapper.find('NavLink').simulate('click')
         expect(wrapper.instance().fetchMembers).toHaveBeenCalled()
       })
+      
+      it('should return an array of ideas (HAPPY)', () => {
+        let mockResponse = {response: "success",
+        'results-for': "Hulk",
+        results: [{
+            id: 332,
+            name: "Hulk",
+            powerstats: {
+                intelligence: "88",
+                strength: "100",
+                speed: "63",
+                durability: "100",
+                power: "98",
+                combat: "85"
+            },
+            image: {
+            url: "https://www.superherodb.com/pictures2/portraits/10/100/125.jpg"
+          }
+        }]
+      }
+        expect(getMember()).resolves.toEqual(mockResponse)
+      });
     })
   })
 })
