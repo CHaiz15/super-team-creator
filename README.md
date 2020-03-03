@@ -12,11 +12,18 @@
   - Test Redux functions
 
 #### Wins:
+
+  - Picking a random API to use as a base for an application that I built from scratch
+  - Creating an idea, wireframing, implementing and testing an app in a matter of days.
+  - Successfully using React & Redux.
   
 #### Challenges
 
-### Overview of Site:
+  - Figuring out a new APIs documentation
+  - Implementing feautures that were overlooked in the inital wireframe.
 
+### Overview of Site:
+This application was designed to allow a user to create teams of superheros/villians and checkout what their combined stats would be. 
 
 ## Super Hero Creator
 #### Home:
@@ -34,13 +41,13 @@
 ### Technologies Used:
 - Javascript/React
 - Redux
-- HTML/CSS
+- HTML/SCSS
 - Jest/Enzyme
 - https://superheroapi.com/
 
 
 ### Systems/Practices
-- git/Version Control
+- Git/Version Control
 - Trello/Project Management
 - Wireframing
 - OOP
