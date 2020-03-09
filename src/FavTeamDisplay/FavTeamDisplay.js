@@ -1,6 +1,6 @@
 import React from 'react'
 import './FavTeamDisplay.scss'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 export const FavTeamDisplay = (props) => {
@@ -13,7 +13,7 @@ export const FavTeamDisplay = (props) => {
       </div>
       <section className='team-container'>
       <section className='members-container'>
-        <div  className='member-div'>
+        <Link to={{pathname:'/team/memberInfo', state: {member: memberOne}}} className='member-div'>
           <h2>{memberOne.name}</h2>
           <img className='member-image' src={memberOne.image.url} alt='member one'/>
           <ul className='powers-list'>Stats:
@@ -24,8 +24,8 @@ export const FavTeamDisplay = (props) => {
             <li>Power: {memberOne.powerstats.power}</li>
             <li>Combat: {memberOne.powerstats.combat}</li>
           </ul>
-        </div>
-        <div className='member-div'>
+        </Link >
+        <Link to={{pathname:'/team/memberInfo', state: {member: memberTwo}}} className='member-div'>
           <h2>{memberTwo.name}</h2>
           <img className='member-image' src={memberTwo.image.url} alt='member two'/>
           <ul className='powers-list'>Stats:
@@ -36,8 +36,8 @@ export const FavTeamDisplay = (props) => {
             <li>Power: {memberTwo.powerstats.power}</li>
             <li>Combat: {memberTwo.powerstats.combat}</li>
           </ul>
-        </div>
-        <div className='member-div'>
+        </Link>
+        <Link to={{pathname:'/team/memberInfo', state: {member: memberThree}}} className='member-div'>
           <h2>{memberThree.name}</h2>
           <img className='member-image' src={memberThree.image.url} alt='member three'/>
           <ul className='powers-list'>Stats:
@@ -48,7 +48,7 @@ export const FavTeamDisplay = (props) => {
             <li>Power: {memberThree.powerstats.power}</li>
             <li>Combat: {memberThree.powerstats.combat}</li>
           </ul>
-        </div>
+        </Link>
       </section>
         <div className='team-stats'>
           <ul>Team Stats:
