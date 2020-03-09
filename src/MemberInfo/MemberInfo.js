@@ -24,6 +24,7 @@ export const MemberInfo = (props) => {
           <ul className='powers-list'>Biography:
             <li>Real Name: {member.biography['full-name']}</li>
             <li>Home: {member.biography['place-of-birth']}</li>
+            <li>Work: {member.work.occupation}</li>
             <li>Alignment: {member.biography.alignment}</li>
             <li>Publisher: {member.biography.publisher}</li>
             <ul>Aliases: {member.biography.aliases.map(alias => <li>"{alias}"</li>)}</ul>
