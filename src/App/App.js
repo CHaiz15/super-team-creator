@@ -6,6 +6,7 @@ import CreationZone from '../CreationZone/CreationZone'
 import TeamDisplay from '../TeamDisplay/TeamDisplay'
 import Favorites from '../Favorites/Favorites'
 import FavTeamDisplay from '../FavTeamDisplay/FavTeamDisplay'
+import MemberInfo from '../MemberInfo/MemberInfo'
 
 export const App = () => {
   return (        
@@ -13,6 +14,7 @@ export const App = () => {
       <Route exact path='/' component={Home} />
       <Route exact path='/create' component={CreationZone} />
       <Route exact path='/team' component={TeamDisplay} />
+      <Route path='/team/memberInfo' component={MemberInfo} />
       <Route exact path='/favorites' component={Favorites} />
       <Route exact path='/favTeam' component={FavTeamDisplay} />
     </>
