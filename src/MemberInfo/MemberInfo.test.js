@@ -37,6 +37,9 @@ describe('MemberInfo', () => {
               publisher: "Marvel Comics",
               alignment: "good"
           },
+          work: {
+            occupation: "Nuclear physicist, Agent of S.H.I.E.L.D.",
+          },
           appearance: {
               gender: "Male",
               race: "Human / Radiation",
