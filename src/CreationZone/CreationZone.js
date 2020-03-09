@@ -69,7 +69,7 @@ export class CreationZone extends Component {
                 name='memberOne'
                 value={this.state.memberOne}
                 className='member-input'
-                placeholder='MemberName...'
+                placeholder='Name...'
                 onChange={(e) => this.handleChange(e)}
                 maxLength='25'
               />

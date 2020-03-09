@@ -95,6 +95,11 @@ li, ul {
   text-align: center;
 }
 
+.member-div:hover {
+  background-color: $primary-red;
+  cursor: pointer;
+}
+
 .member-image {
   align-self: center;
   border-radius: 50%;
@@ -112,3 +117,4 @@ li, ul {
   width: 100%;
   margin: 2% 0 0 0;
 }
+

@@ -3,12 +3,11 @@ import './TeamDisplay.scss'
 import { connect } from 'react-redux'
 import { Loader } from '../Loader/Loader'
 import { addFavorite } from '../Actions'
-import { NavLink } from 'react-router-dom'
+import { NavLink, Link } from 'react-router-dom'
 import ErrorMessage from '../ErrorMessage/ErrorMessage'
 import PropTypes from 'prop-types'
 
 export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addFavorite}) => {
-
   if(!memberOne && !memberTwo && !memberThree) {
     return <Loader />
   } else if (memberOne === undefined || memberTwo === undefined || memberThree === undefined) {
@@ -23,7 +22,7 @@ export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addF
       </div>
       <section className='team-container'>
       <section className='members-container'>
-        <div  className='member-div'>
+        <Link to={{pathname:'/team/memberInfo', state: {member: memberOne}}} className='member-div'>
           <h2>{memberOne.name}</h2>
           <img className='member-image' src={memberOne.image.url} alt='member one'/>
           <ul className='powers-list'>Stats:
@@ -34,8 +33,8 @@ export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addF
             <li>Power: {memberOne.powerstats.power}</li>
             <li>Combat: {memberOne.powerstats.combat}</li>
           </ul>
-        </div>
-        <div className='member-div'>
+        </Link >
+        <Link to={{pathname:'/team/memberInfo', state: {member: memberTwo}}} className='member-div'>
           <h2>{memberTwo.name}</h2>
           <img className='member-image' src={memberTwo.image.url} alt='member two'/>
           <ul className='powers-list'>Stats:
@@ -46,8 +45,8 @@ export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addF
             <li>Power: {memberTwo.powerstats.power}</li>
             <li>Combat: {memberTwo.powerstats.combat}</li>
           </ul>
-        </div>
-        <div className='member-div'>
+        </Link>
+        <Link to={{pathname:'/team/memberInfo', state: {member: memberThree}}} className='member-div'>
           <h2>{memberThree.name}</h2>
           <img className='member-image' src={memberThree.image.url} alt='member three'/>
           <ul className='powers-list'>Stats:
@@ -58,7 +57,7 @@ export const TeamDisplay = ({team, name, memberOne, memberTwo, memberThree, addF
             <li>Power: {memberThree.powerstats.power}</li>
             <li>Combat: {memberThree.powerstats.combat}</li>
           </ul>
-        </div>
+        </Link>
       </section>
         <div className='team-stats'>
           <ul>Team Stats:
