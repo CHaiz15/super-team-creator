@@ -35,7 +35,10 @@ This application was designed to allow a user to create teams of superheros/vill
 #### Team Display:
 <img width="1440" alt="Screen Shot 2020-03-02 at 4 52 52 PM" src="https://user-images.githubusercontent.com/19761687/75729042-c94fd400-5ca6-11ea-94f5-015a97fe6eb7.png">
 
-### Favorites:
+#### Member Info:
+<img width="1440" alt="Screen Shot 2020-03-09 at 3 52 25 PM" src="https://user-images.githubusercontent.com/19761687/76260707-0a536580-621e-11ea-82d5-b1c26f87fe56.png">
+
+#### Favorites:
 <img width="1440" alt="Screen Shot 2020-03-02 at 4 55 02 PM" src="https://user-images.githubusercontent.com/19761687/75729047-cc4ac480-5ca6-11ea-800c-700269f7fe01.png">
 
 ### Technologies Used:
