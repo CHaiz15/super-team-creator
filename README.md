@@ -1,5 +1,5 @@
 # Super Team Creator
-### Application for creating a super teams of heros and villians!
+### Application for creating super teams of heros and villians!
 
 ## Solo project by Caleb Haizlett, Module 3 at Turing School of Software and Design
 
